@@ -1,0 +1,6 @@
+sales_ice <- c(450, 613, 466, 205.7,571.0, 622.0, 851.4, 621.4,875.3,979.7, 927.5,14.45)
+sales_cooldrink <- c(550, 713, 566, 687.2,110, 120, 72.4,814.4,423.5, 98.7, 741.4,345.3)
+combined.sales <- matrix(c(sales_ice,sales_cooldrink),nrow = 12)
+sales.timeseries <- ts(combined.sales,start = c(2021,1),frequency =12)
+plot(sales.timeseries, main = "Showing ice cream – cooldrink sales")
+print(sales.timeseries)
